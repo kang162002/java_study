@@ -31,6 +31,8 @@ public class Variable06 {
 	
 		
 		
+		
+		
 	}
 
 }
