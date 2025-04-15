@@ -62,7 +62,10 @@ public class practice02 {
 		String artScore = "70";
 		
 		int math = Integer.parseInt(artScore);
+		int english = Integer.parseInt(englishScore);
+		int art = Integer.parseInt(artScore);
 		
+		System.out.println(math + english + art);
 		
 		/*
 		5. 조카에게 나눗셈 계산하는 연습을 시키고 있습니다.
