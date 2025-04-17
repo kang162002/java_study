@@ -26,7 +26,7 @@ public class operator01 {
 		
 		System.out.println("=======증감=====");	//
 		System.out.println();	//
-		System.out.println();	//
+	
 		
 		int x = 10;
 		int y = 20;
@@ -42,7 +42,7 @@ public class operator01 {
 		System.out.println( z );	//	30
 		
 		
-		int q = 1;	// q:2
+		int q = 1;			// q:2
 		int w = 3;	
 		int e = 10 + ++q;	// 10 + 2; = 12
 		int r = 3 + w--;	// 	3 + 3; 	6
