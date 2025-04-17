@@ -22,7 +22,9 @@ public class variable05 {
 		
 		System.out.println();
 		
+		
 		int hour = 12;
+		
 		int minute = 36;
 		// 	출력예상: 현재 12시 36분 입니다.
 		

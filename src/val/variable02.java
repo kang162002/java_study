@@ -17,6 +17,8 @@ public class Variable02 {
 		
 		char ch1 = 123;	//정수형 변수 char		
 		char ch2 = 'B'; //문자 한개 '작은따옴표'
+		
+		
 		//char ch3 = 'AB';//두개 사용 불가
 		//char ch3 = "A"; //문자 한개 '작은따옴표'   "큰따옴표 사용 불가
 		

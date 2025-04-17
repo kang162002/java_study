@@ -19,6 +19,7 @@ public class Variable06 {
 		System.out.println("입력완료");	//
 		System.out.println(inputData);  //
 		
+		
 		// Scanner 더 간단하게 하는활용 
 		System.out.print("지금 몇시죠? :");
 		int hour = scanner.nextInt();

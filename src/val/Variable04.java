@@ -16,6 +16,7 @@ public class Variable04 {
 		
 		System.out.println(s1+n1);
 		
+		
 			// 숫자형 String - > int
 		
 		int n2 = Integer.parseInt(s1);

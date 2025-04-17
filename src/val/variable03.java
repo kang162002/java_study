@@ -18,6 +18,7 @@ public class variable03 {
 		int i1 = 30;
 		int i2 = i1; //int	<- int 같은 정수 타입이라 상관X
 		
+		
 		// int i3 = 3.33;	//int 정수형 <- 실수 3.33 저장불가XX
 		
 		double d3 = i1; // double < int 자동타입변환 큰타입 = 작은타입
