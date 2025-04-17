@@ -34,7 +34,7 @@ public class Conditional03 {
 //			System.out.println("defult 이다");
 //		}
 		
-		switch(dice) {
+		switch(dice) { // break 포함됨 // java 14 17 버전에 
 		case 1 -> System.out.println("1이다"); 
 			
 		case 2 -> System.out.println("2이다");
@@ -42,6 +42,8 @@ public class Conditional03 {
 		case 99 -> System.out.println("3이다");
 			
 		default -> System.out.println("defult 이다");
+		
+		
 		}
 		
 		
