@@ -83,14 +83,23 @@ public class practice07 {
 			System.out.println("잘못된 입력");
 		}
 		      
-		if ((number == 1 &&  year < 2000 )  ||   (number == 2 && year < 2000) ||
-			(number== 3 && year < 2000) || (number == 4 && year < 2000)) {
-			
-		}else {
-			System.out.println("잘못된 입력");
-		}
 		
-	
+//		
+//		if ((number == 1 &&  year < 2000 )  ||   (number == 2 && year < 2000) ||
+//			(number== 3 && year < 2000) || (number == 4 && year < 2000)) {
+//			
+//		}else {
+//			System.out.println("잘못된 입력");
+//		}
+//		
+//		
+//		
+//		
+//		if ( number == 1 || number == 3 ) {
+//			System.out.println(ahe + " 살 남자");
+//		}else {
+//			System.out.println(age + "살 여자");
+//		}
 		
 		
 		

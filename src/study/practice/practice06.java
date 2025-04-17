@@ -26,7 +26,7 @@ public class practice06 {
 			
 			
 //			System.out.print("사다리꼴 윗변 입력하세요 : ");
-//			int top = scanner.nextInt();			// int top으로 scanner.nextInt 를 저장 
+//			int top = scanner.nextInt();			// 	int top으로 scanner.nextInt 를 저장 
 			
 //			System.out.print ("사다리꼴 밑변 입력하세요 : ");
 //			int base = scanner.nextInt();
@@ -59,14 +59,17 @@ public class practice06 {
 		
 			//4번
 			
-			Scanner scanner = new Scanner(System.in);
+//			Scanner scanner = new Scanner(System.in);
+//			
+//			System.out.print("세자리의 정수를 입력 : ");
+//			int num1 = scanner.nextInt();
+//			
+//			System.out.println("백의자리 : " +	(num1/100) );
+//			System.out.println("십의자리 : " +	(num1/10%10) );
+//			System.out.println("일의자리 : " +	(num1%10));
+//			
+//			
 			
-			System.out.print("세자리의 정수를 입력 : ");
-			int num1 = scanner.nextInt();
-			
-			System.out.println("백의자리 : " +(num1/100) );
-			System.out.println("십의자리 : " +(num1/10%10) );
-			System.out.println("일의자리 : " + (num1%10));
 			
 			
 	}

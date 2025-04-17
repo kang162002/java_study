@@ -79,7 +79,6 @@ public class practice02 {
 
 		*/
 		
-		
 		int num1 = 4;
 		int num2 = 10;
 		double num3 = (double)num1 / (double)num2 ; // int/ int -> 0.4 -> int -> 0
