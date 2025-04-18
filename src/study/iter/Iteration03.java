@@ -27,15 +27,16 @@ public class Iteration03 {
 			energy--;
 			if (energy == 0 )
 				break;
-			
-			
-			
 		}
-					//    ┌> true 를 넣어도 괜찮다
-		for(energy =50; energy > 0; energy--) {
-			System.out.println("달린다");
-		} 
-		
+			
+			
+//			
+//		}
+//					//    ┌> true 를 넣어도 괜찮다
+//		for(energy =50; energy > 0; energy--) {
+//			System.out.println("달린다");
+//		} 
+//		
 		
 		
 		/*
@@ -58,20 +59,22 @@ public class Iteration03 {
 		 }
 		 
 		 */
-		System.out.println("=================");
+//		System.out.println("=================");
+//		
+//		
+//		for (i=1; i <=10; i++) { 
+//		
+//			if (i==5 || i==8)
+//				continue; // 다음 회차로 넘어감 설정값의 5번과 8번을빼고 다음 설정값까지 계속 진행 continue
+//			if (i == 7)
+//				break;
+//			System.out.println(i);
+//		}
 		
+	
 		
-		for (i=1; i <=10; i++) { 
-		
-			if (i==5 || i==8)
-				continue; // 다음 회차로 넘어감 설정값의 5번과 8번을빼고 다음 설정값까지 계속 진행 continue
-			if (i == 7)
-				break;
-			System.out.println(i);
-		}
-		
+	
 		
 		
 	}
-
 }

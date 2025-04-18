@@ -9,26 +9,26 @@ public class Iteration04 {
 		// 반복분 중첩 가능
 		
 		
-		for (int i = 1; i <=3; i ++ ) {//i: 1 2 3 
-				
-			System.out.println("밖 for 문");
-			for (int j = 1; j <=4; j ++ ) {
-				System.out.println("내부 for 문");
-			}
-			
-		}
-		
-		for (int i=1; i<=3; i++) {
-			System.out.println("1");
-			for (int j=1; j<=4; j++) {
-				System.out.println("2");
-				for (int k = 1 ; k<=3; k++) {
-					System.out.println("3");
-				}
-			}
-		}
-			
-		
+//		for (int i = 1; i <=3; i ++ ) {//i: 1 2 3 
+//				
+//			System.out.println("밖 for 문");
+//			for (int j = 1; j <=4; j ++ ) {
+//				System.out.println("내부 for 문");
+//			}
+//			
+//		}
+//		
+//		for (int i=1; i<=3; i++) {
+//			System.out.println("1");
+//			for (int j=1; j<=4; j++) {
+//				System.out.println("2");
+//				for (int k = 1 ; k<=3; k++) {
+//					System.out.println("3");
+//				}
+//			}
+//		}
+//			
+//		
 		
 		int i =1;
 		while (i <=3) {
