@@ -71,35 +71,41 @@ public class Iteration01 {
 		}
 		System.out.println("1 ~ 50까지의 합 : " + num);
 		
+		for (int v = 1; v <= 153; v++) {
+			num = num + v;
+		}
+		System.out.println("1~153합 : " + num);
+		
 		
 		//k : 2
 		// k < 20 
-		for (int k=2; k<20; k=k*2) {
-			System.out.println(k);
+//		for (int k=2; k<20; k=k*2) {
+//			System.out.println(k);
 			//1번 int k = 2 
 			//2번 k<20
 			//3번 k=k*2   
 			
-		}
+//		}
 		
-		for (int k=400; k>100; k=k -50) {
-			System.out.print(k + " ");
+//		for (int k=400; k>100; k=k -50) {
+//			System.out.print(k + " ");
 			
 			//400 350 300 250 200 150 .....
-		}
+//		}
 		//k : 100
 		// 	K >= 90
 		
-		System.out.println("\n");
-		for (int k = 100; k>=90; k--) {
-			System.out.print(k+ " ");
+//		System.out.println("\n");
+//		for (int k = 100; k>=90; k--) {
+//			System.out.print(k+ " ");
 			// 100 99 98 97 
-		}
+//		}
 		
 		
-		
-		
-		
+		for (int d = 1; d <= 111; d++) {
+			num = num + d;
+		}	// 마지막 + 변수갑 결론
+		System.out.println("111합 : " + num);   //
 		
 		
 	}
