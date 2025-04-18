@@ -7,6 +7,7 @@ public class practice11 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
+		
 //		
 //		* 윤년이란?
 //				지구가 태양을 한 번 공전하는 데 걸리는 시간을 일 년으로 두었는데,

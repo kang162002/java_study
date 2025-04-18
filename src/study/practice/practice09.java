@@ -35,6 +35,7 @@ public class practice09 {
 		
 		// 4번 i 가 25 50 75 100 해서 4번 반복
 
+		
 		for (int i = 25; i <= 100; i+=25) {
 			System.out.println(i + "");
 		}

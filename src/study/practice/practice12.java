@@ -10,6 +10,7 @@ public class practice12 {
 		
 		
 		
+		
 		for (int i = 1; i<=5; i++) { // 5회반복 1234 5번 반복
 			System.out.println("12345");
 		}
