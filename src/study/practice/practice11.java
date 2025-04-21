@@ -57,16 +57,16 @@ public class practice11 {
 		
 		
 		
-		
-		if (year % 400 == 0) {
-			System.out.println("윤년O");
-		}else if (year % 100 == 0) {
-			System.out.println("윤년X");
-		}else if (year % 4 == 0 ) {
-			System.out.println("윤년O");
-		}else {
-			System.out.println("윤년X");
-		}
+//		
+//		if (year % 400 == 0) {
+//			System.out.println("윤년O");
+//		}else if (year % 100 == 0) {
+//			System.out.println("윤년X");
+//		}else if (year % 4 == 0 ) {
+//			System.out.println("윤년O");
+//		}else {
+//			System.out.println("윤년X");
+//		}
 		
 // ===================================================================================================================================	
 		
