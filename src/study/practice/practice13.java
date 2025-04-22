@@ -35,13 +35,13 @@ public class practice13 {
 		 
 		 */
 		
-		//parac1();
+		parac1();
 		//parac2();
 		//parac3();
 		//parac4();
 		//parac5();
 		//parac6();
-		parac7();
+		//parac7();
 		
 	}
 	
@@ -60,9 +60,7 @@ public class practice13 {
 			System.out.println("odd");
 			}
 		
-		System.out.println((num%2==0) ? "even"  : "odd");  //한줄로 가능
-		
-		
+//		System.out.println((num%2==0) ? "even"  : "odd");  //한줄로 가능	
 		}
 	
 	
