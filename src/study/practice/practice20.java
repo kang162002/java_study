@@ -11,8 +11,8 @@ public class practice20 {
 		// prac1();
 		//prac2();
 		//prac3();
-		prac4 ();
-		
+		//prac4 ();
+		prac5 ();
 	}
 
 	public static void prac1() {
@@ -143,6 +143,15 @@ public class practice20 {
 		}
 		
 	}
+	
+	
+	public static void prac5 () {}
+	
+	public static void prac6 () {}
+	
+	public static void prac7 () {}
+	
+	
 
 //	2. 정수 2개를 입력 받아서, 아래 계산 결과를 출력하시오. 큰수 - 작은수
 	/*
