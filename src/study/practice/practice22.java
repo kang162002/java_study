@@ -173,23 +173,60 @@ public class practice22 {
 			
 			if( i%2 == 0 ) { //짝수
 				sum = sum - i;
+				
 			}else { //홀수
+				
 				sum = sum + i;
+				
 			}
 			if (sum >= 100)
 				break;
+			
+			i++;
 		}
+	
 		
 		System.out.println("100 넘는 시점의 누적합 : " + sum);
 		System.out.println("마지막에 연산된 값 : " + i);
 		
+	
+		
+	/*
+		int sum = 0;
+ 		int i = 1;
+ 		
+ //		while(sum < 100) {
+ //			
+ //		}
+ 		
+ 		while(true) {
+ 			
+ //			2개씩 -1
+ //			+197-198+199
+ //			-99
+ //			100
+ //			-100
+ 			
+ 			// -198 + 199
+ 			if(i%2 == 0) { //짝수
+ 				sum = sum - i;
+ 			} else { //홀수
+ 				sum = sum + i;
+ 			}
+ 			
+ 			//i: 199
+ 			
+ 			if(sum >= 100)
+ 				break;
+ 			
+ 			i++;  // i : 200
+ 		}
+ 		
+ 		System.out.println("100 넘는 시점의 누적합 : " + sum);
+ 		System.out.println("마지막에 연산된 값 : " + i);
+		
+	*/
+		
 	}
-		
-
-			
-		
-		
-		
-	}
-
+}
 
