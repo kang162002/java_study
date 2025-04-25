@@ -153,14 +153,14 @@ public class practice23 {
 //		int menu2Count = 0;
 //		int menu3Count = 0;
 
-		while (true) {
+		while (true) { // 참거짓
 
 			System.out.println("======메 뉴======");
 			for (int i = 0; i < menuArr.length; i++) {
 				// i : 0 1 2 //우리가 보는 인덱스
 				// No: 1 2 3 //우리가 보여줘야하는 인덱스
 				System.out.printf("%d.%s \t%5d원\n", i + 1, menuArr[i], priceArr[i]);
-			}
+			}									
 			System.out.println("================");
 
 			// 메뉴 입력

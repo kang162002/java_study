@@ -13,7 +13,7 @@ public class practice24 {
 			//prca4();
 			//prca5v1();
 			//prca5v2();
-			prca6();
+			//prca6();
 		
 	}
 	
@@ -228,51 +228,31 @@ public class practice24 {
 		
 int[] lotto = new int[6];	// 로또 6개 값 저장용 배열변수
 		
-		int num; //뽑은 숫자 임시저장
-		int index = 0 ; // 배열의 위치를 나타내는 인덱스
-		
+
 	
-		while(true) {
-			
-			//랜덤값 뽑기
-			num = (int)(Math.random()*45)+1;
-			
-			boolean isDuplicated = false;
-			// 중복인가를 확인하는 변수  true -> 중복 O  : false -> 중복X 
-			// 중복 여부 사전 false 로 초기화
- 			//index 값 기준
-			for(int i=0; i<index; i++) {
-				if(lotto[i] == num ) {	// 내가 뽑은 값이랑 중복된 값이 있는가?
-					
-					//true 실행 -> 중복된 값이 있다.
-					// 중복이다  		기록
-					isDuplicated = true; 	// 중복이다 기록용
-					break;
-				}
-			}
-			
-			// 1 2 5 6 7 1 
-		/*	
-			if (isDuplicated) { // 중복이면 Pass	
-			}else { //중복 아니면 Lotto 배열에 저장하며 다시 진행	
-			}
-			if (!isDuplicated) {
-			}
-			*/
-			if (isDuplicated)
-			continue;
-			
-			//중복 아닐때 수행할 코드
-			lotto[index] =num;
-			index++; 		// 다음칸으로 이동하도록 증가
-			
-			//6개 다 채웠으면 끝
-			if (index >= lotto.length)
+	int num; //뽑은 숫자 임시 저장
+	int index = 0; //배열의 위치를 나타내는 인덱스
+	boolean isDuplicated = false;
+
+	// 6개의 로또번호 뽑는 과정
+	for(int i=0; i<6; i++) {
+		//i: 2
+		lotto[i] = (int)(Math.random() * 45) + 1 ;
+		
+		for(int j=0; j<i; j++) {
+			if(lotto[i] == lotto[j]) {
+				i--;
 				break;
+			}
 		}
-		
-		
-		
+	}
+	
+	// 6개 뽑힌 번호 출력
+	for(int i=0; i<6; i++) {
+		System.out.print(lotto[i] + " ");
+	}
+	
+	
 		
 	}
 	public static void prca5v2() {
