@@ -278,39 +278,138 @@ public class practice26 {
 	}
 
 	public static void level2() {
-
 		/*
-		 * - 레벨 1 부실 공사로 인한 전기 공급의 한계로, 엘리베이터가 멈출 수 있는 횟수에 제한이 생깁니다. 엘리베이터는 마지막 횟수가 되면,
-		 * 남아 있는 사람들은 계단으로 보내며 (마지막 횟수가 3일 때, 사람들의 내릴 층이 2, 3, 4, 5층이라면 4층에서 멈추어야 함) 현재
-		 * 층 수에 점검 중 표시를 하고 운영을 멈춥니다.
-		 * 
-		 * + 엘리베이터가 멈출 수 있는 최대 횟수는 사용자 입력을 받습니다.
-		 */
+		- 레벨 2
+		엘리베이터는 태울 수 있는 총 중량 또는 정원이 있습니다.
+		탑승 인원을 순서대로 측정하되, 총 무게를 넘거나 정원이 넘으면 그 뒤에 인원을 엘리베이터에 태우지 않습니다.
+		(총 중량이 200kg 일 경우, 탑승 인원 순서대로 80, 120, 40 이면 가장 마지막 사람은 태우지 않음)
 
+		+ 엘리베이터의 총 무게 및 정원은 사용자 입력을 받습니다.
+		+ 탑승 인원 및 각 탑승 인원의 내릴 층은 랜덤으로 추출합니다. (사용자 입력에서 변경)
+		+ 각 탑승 인원의 무게도 랜덤으로 추출합니다. (40 kg ~ 150 kg)
+		*/
+		
+		
+		// 탑승인원 랜덤
+		// 랜덤인원 1 ~ 20명 대기 가정
+		
+		
 		Scanner scanner = new Scanner(System.in);
-		Random random = new Random();
-		
-		
-		System.out.print("탑승 인원 수 입력 : ");
+		int personcount = (int)(Math.random() * 20 ) +1;
+		System.out.print("탑승 인원 수 입력 :" + personcount);
 		int personCount = scanner.nextInt();
 
 		int[] destFloorArr = new int[personCount];
 
-		System.out.print("목적지 층수 입력(2~100) : ");
+//		System.out.print("목적지 층수 입력(2~100) : ");
+		System.out.print("목적지 층수 목록(2 ~ 100 : ");
 		for (int i = 0; i < destFloorArr.length; i++) {
-			destFloorArr[i] = scanner.nextInt();
+//			destFloorArr[i] = scanner.nextInt();	층수 입력
 			// 입력한 값이 2~100 이 아니면? -> 다시 입력해라
+			
+			//층수 랜덤 처리
+			destFloorArr[i] = (int)(Math.random() * 99 ) +2; // 2~ 100
+			System.out.print(destFloorArr[i] + " ");
+			
 		}
-
+		System.out.println();
+		
+		int[]weightArr = new int[personCount];
+		System.out.print("탑승객 몸무게 (40 ~ 150) :");
+		for(int i=0; i<weightArr.length; i++) {
+			weightArr[i] = (int)(Math.random() * 111)+40; //40~15
+			System.out.print(weightArr[i] + " ");
+		}
+		System.out.println();
+		
 		System.out.print("최대 멈춤 횟수 입력 : ");
 		int maxStopCount = scanner.nextInt();
-
+		
+		//엘리베이터의 총무게
+		System.out.print("엘리베이터 총 무게 (kg)입력 : ");
+		int maxWeight = scanner.nextInt();
+		System.out.print("엘리베이터 탑승 정원 입력 :" );
+		int maxPersonCount = scanner.nextInt();
+			
+		
+		
 		// 1층 ~ 100층 -> 목적지 층수에 멈추기
 		// v2 : 입력층 중에서 최대층까지만 가고 내려오기
-
+		
+		//실제 탑승 인원 수
+		
+		// 1) 탑승 정원 만큼
+		// 2) 탑승객의 무게 합산 <= 엘리베이터 총 무게
+		
+		int sumWeight =0; // 승객 무게합
+		int realPersonCount = 0; // 실제 탑승 인원
+		
+		/*
+		for(int i=0; i<weightArr.length; i++) {
+			//10명 0 ~ 9
+			//76 91 136 73 105 115 weightArr ( 0 ~ 4 )
+			// weightArr 무게 계 
+			
+			//최대인원을 넘는가?
+			//i : 0 1 2 "3"이 되는순간 멈춰야한다
+			// maxpersonCount : 3 // 크거나 같그너
+			if(i > maxPersonCount) {
+				realPersonCount = i;
+				break;
+			}
+			//최대무게를 넘는가?
+			if(sumWeight + weightArr[i] > maxWeight) {
+				realPersonCount = i;	// 3명째 걸렸다 예시) 70 50 150 < 200 
+			break;							// 				i 0  1 	2
+			
+			} else {
+				sumWeight = sumWeight + weightArr[i];
+			}							
+			
+		}
+		*/
+		
+		//탑승 정원 - > 무게 필터
+		// weightArr.length > maxPersonCount
+		
+		//무게 먼저 필터 - >  탑승정원 적용
+		int imaxCount = ( weightArr.length > maxPersonCount) ? maxPersonCount : weightArr.length;
+		
+			for(int i= 0; i <imaxCount; i++) {
+				sumWeight = sumWeight + weightArr[i];
+				
+				if (sumWeight > maxWeight) 
+					break;
+			
+				realPersonCount++;
+			}
+	
+		
+		for (int i=0; i<weightArr.length; i++) {
+			//제한 사항 필터
+			sumWeight = sumWeight + weightArr[i];
+			
+			if (sumWeight > maxWeight) 
+				break;
+		
+			realPersonCount++;  // 인원수 제한 체크하는 코드
+			}
+		
+		
+		//
+		realPersonCount  =  (realPersonCount>maxPersonCount) ? maxPersonCount : realPersonCount;
+		
+		System.out.println("최종 탑승 인원 : " + realPersonCount);
+		// 4명
+		// < realPersonCount
+		
+		//-------------------------------------------------------------------
+		//1) 실제 탑승인원 -> 적용
+		//2) destFloorArr 실제 작동될 범위로 새로 지정
+		
 		// 입력 층 중에서 최대값 구하기
 		int maxFloor = destFloorArr[0];
-		for (int i = 0; i < destFloorArr.length; i++) {
+		for (int i = 0; i < realPersonCount; i++) {
 			if (maxFloor < destFloorArr[i])
 				maxFloor = destFloorArr[i];
 		}
@@ -318,18 +417,24 @@ public class practice26 {
 		int floor = 1;
 		int flow = 1; // flow: 1 -1 층의 진행 방향을 의미, 층 값 변화 연산에 참여
 		int stopCount = 0; // 멈춘 횟수
-		int totalWeight = 0;
 		// 도착 층 표시
 		// 1~100층 -> 100층 -> 1층
 		// 1~최대층 -> 최대층 -> 1층
-		while (true) {
-			int weight = random.nextInt(200-45)+45;
-			System.out.println(floor + "층");
 		
+
+		
+		while (true) {
+
+			if (realPersonCount < 1 ) {
+				System.out.println("=== 탑승 인원이 없습니다===");
+				break;
+			}
+			
+			System.out.println(floor + "층");
+
 			// 내리는 층인지 확인
 			if (flow == 1) {
-				
-				for (int j = 0; j < destFloorArr.length; j++) {
+				for (int j = 0; j < realPersonCount; j++) { //  
 					if (floor == destFloorArr[j]) {
 						System.out.println("****도착****");
 						stopCount++;
@@ -354,5 +459,5 @@ public class practice26 {
 			floor += flow;
 		}
 	}
-
+	
 }
