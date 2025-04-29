@@ -17,7 +17,7 @@ public class Phone {
 			
 //		}
 	
-	//	생성자 선언┐
+	//	생성자 2 선언┐
 		Phone (String model) {
 			this(model, 100, 3000); // 내 클래스 내에 있는 다른 생성자 호출
 //			this.model = model;
@@ -27,7 +27,7 @@ public class Phone {
 			
 			
 		}
-
+//		생성자 2
 		Phone(String model, int price){
 			this(model, price, 3000);
 //			this.model = model;
@@ -37,14 +37,15 @@ public class Phone {
 			
 			
 		}
-//		생성자 선언┐	매개변수
+//		생성자 3 선언┐	매개변수
 		Phone(String model, int price, int battery){	// 가장 많은 매개변수에게 적용?
+		//			
 			this.model = model;
 			this.price = price;
 			this.battery = battery;
-	//		  └또다른 생성자를 호출할때
+	//		 └ 필드와 매개변수 이름이 완전 동일할경우 this. 를 넣어서  
 			
-				//초기화 개념
+				
 			//전원확인
 			//재부팅
 			//필름부착
