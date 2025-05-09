@@ -12,6 +12,6 @@ public class Mike {
 	public void check () {
 		System.out.println("Mike 기능 Check");
 	}
-	
+
 	
 }
