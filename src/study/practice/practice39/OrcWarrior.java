@@ -12,7 +12,8 @@ public class OrcWarrior extends Orc{
 	// 메소드 오버라이딩!
 	public String toString() {
 //	return "이름:"+name +" HP:"+hp+ " 아머:" + amor;
-		String result = String.format("Orc { name : %s, hp : %d, armor : %d)", name, hp,amor);
+		String result = String.format(
+		"Orc { name : %s, hp : %d, armor : %d)", name, hp,amor);
 		return result;
 	
 	}
