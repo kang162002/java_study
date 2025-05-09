@@ -28,7 +28,7 @@ public class ProtectedFields {
 		// 모든 운동 설명 출력
 		for (int i = 0; i < sportsArr.length; i++) {
 		Sports tmp = sportsArr[i];
-		tmp.description();
+		tmp.description();//	Sports 에있는 프린트로 넘어가 출력한다 //
 		}
 	}
 
