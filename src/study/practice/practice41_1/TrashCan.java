@@ -34,30 +34,13 @@ public class TrashCan {
 		
 		
 		trashPercentage += (trashLiter/liter) * 100;
+		//					소수점.	올림
+		// 	3 / 40=
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 	}
-	
-	
-	
-	
-	
-	
 	
 	
 	

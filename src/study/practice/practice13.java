@@ -39,7 +39,7 @@ public class practice13 {
 		//parac2();
 		//parac3();
 		//parac4();
-		//parac5();
+		parac5();
 		//parac6();
 		//parac7();
 		

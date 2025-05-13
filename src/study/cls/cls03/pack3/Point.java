@@ -4,16 +4,19 @@ public class Point {
 
 //								setter, getter 메소드
 
-	private int lang;
-	private int eng;
-	private int math;
+	 int lang;
+	 int eng;
+	 int math;
 	String name; // 사람이름 이 점수의 소유자
 
 	// 생성자 public붙이기
 	
-//	public Point () {}
+//	public Point () {
+//	}
 
-	private Point () {}
+//	private Point () {
+		// private 이 있으면 외부에서 객채를 만들수없다. 
+//	}
 	
 	// getter 값 가져오기(반환)
 

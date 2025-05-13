@@ -31,10 +31,10 @@ public class operator01 {
 		int x = 10;
 		int y = 20;
 		int z = 30;
-		// 	x-- 증감 뒤에있어 나중에
+		// 	x-- - 증감 뒤에있어 나중에
 		System.out.println( x-- ); 	// 	x값 10 출력 -> x : 9
 		System.out.println( x );
-		// 	++y 증감 앞에있어서 먼저
+		// 	++y + 증감 앞에있어서 먼저
 		System.out.println( ++y ); 	//	y값 21 -> 21 출력
 		System.out.println( y );	//	y:21
 		

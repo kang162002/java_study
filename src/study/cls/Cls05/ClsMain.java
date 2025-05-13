@@ -94,6 +94,7 @@ public class ClsMain {
 	
 		//						  Temp tt = null; // 들어갈수있다
 	public static Temp[] methodE (Temp tt) {
+		
 		return null; 
 		
 		//Temp[] tArr = null; 을 넣을수있느냐 

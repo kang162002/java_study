@@ -16,7 +16,7 @@ public class Sink {
 	public int getWidthAsCm () {	// width cm 단위로 반환하는 메소드
 		return width/10;	
 	}
-	public double getWidthAsMeter () {
+	public double getWidthAsMeter () {	// width m 단위
 		return width/1000.0;
 	}
 	

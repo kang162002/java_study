@@ -21,7 +21,7 @@ public class Sports  {
 	class Soccer extends Sports {
 		/* 3. 메소드 오버라이딩(재정의)을 통해 축구을 설명해주세요. */
 		public void description() {
-			System.out.printf("[%s]는 여가/축구공을 가지고 잔디에서 운동하는 /체력 단련 등을 위한 신체 운동입니다.\n", name);
+	System.out.printf("[%s]는 여가/축구공을 가지고 잔디에서 운동하는 /체력 단련 등을 위한 신체 운동입니다.\n", name);
 		}
 	}
 
@@ -29,6 +29,6 @@ public class Sports  {
 	class PingPong extends Sports {
 		/* 4. 메소드 오버라이딩(재정의)을 통해 탁구을 설명해주세요. */
 		public void description() {
-			System.out.printf("[%s]는 여가/탁구체를 가지고 탁구공을 넘겨 점수를 내는 /체력 단련 등을 위한 신체 운동입니다.\n", name);
+	System.out.printf("[%s]는 여가/탁구체를 가지고 탁구공을 넘겨 점수를 내는 /체력 단련 등을 위한 신체 운동입니다.\n", name);
 		}
 	}

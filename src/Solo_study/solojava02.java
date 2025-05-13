@@ -46,6 +46,7 @@ public class solojava02 {
 		
 		
 		// for 반복문으로 만드는  100이상 결과값 만들기 하나
+		/*
 		int num = 0;
 		
 		for (int j=1; j<=10; j++) {
@@ -61,15 +62,23 @@ public class solojava02 {
 		int a = 0;
 		
 		for (a =1; a<=10; a ++) {
-			sum = sum + a; // 누적 합 1 +2+3+4+...
-			sum2 = sum2+sum;  // 누적합의 누적합 
+			sum = sum + a; 		// 누적 합 1 +2+3+4+...
+			sum2 = sum2+sum;  	// 누적합의 누적합 
 		}
 		System.out.println("합계 :" + sum2);
+		*/
 		
+		/*
+		int[][] intArr = new int[5][4];
 		
-		
-		
-		
+		int num = 1;
+		for (int a = 0; a <= intArr.length; a++) {
+			for(int b = 0; b<=intArr[a].length; b++) {
+				intArr[a][b] = num++;
+			}
+			
+		}
+		*/
 		
 		
 

@@ -8,7 +8,7 @@ public class practice16 {
 		
 			prac1 ();
 			//prac2 ();
-		
+			//prac3 ();
 		
 	}
 
@@ -110,5 +110,38 @@ public class practice16 {
 		      
 		 }  
 	}
-	
+	public static void prac3() {
+		 //		3. 4x4 배열을 생성하여, 값을 아래와 같이 저장후 출력 하시오.
+		 //		(*반복문을 사용하면 좀 더 편하게 저장이 가능합니다.)
+		 //		1   2   3   4
+		 //		5   6   7   8
+		 //		9  10 11 12
+		 //		13 14 15 16
+		 		
+		 		//arr[4][4]
+		 		
+		 		//int[][] arr = {{1,2,3,4}, {5,6,7,8}, {9,10,11,12}, {13,14,15,16}};
+		 		int[][] arr = new int[4][4];
+		 		
+		 		int num = 1;
+		 		for(int i=0; i<arr.length; i++) {
+		 			for(int j=0; j<arr[i].length; j++) {
+		 //				arr[i][j] = num;	
+		 //				num++;	
+		 				//i: 0		 1		 2 
+		 				//j: 0 1 2 3 0 1 2 3 0 1  2  3  ...
+		 				//n: 1 2 3 4 5 6 7 8 9 10 11 12 ...
+		 				arr[i][j] = (4*i) + (j+1);
+		 			}
+		 		}
+		 		
+		 		
+		 		for(int i=0; i<arr.length; i++) {	//i : 0 1 2 3   행 인덱스
+		 			for(int j=0; j<arr[i].length; j++) {
+		 				//System.out.print(arr[i][j] + " ");
+		 				System.out.printf("%3d", arr[i][j]);
+		 			}
+		 			System.out.println();
+		 		}
+		 	}
 }

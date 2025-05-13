@@ -18,8 +18,8 @@ public class Refernce04 {
 		String[] arr4 = {"A","B","C"}; 
 		
 		System.out.println(arr3 == arr4);
-		System.out.println(arr3[0] == arr4[0]);
-		System.out.println(arr3[0].equals(arr4[0]));
+//		System.out.println(arr3[0] == arr4[0]);
+		System.out.println(arr3[0].equals(arr4[0])); // Sting 비교할떈 .equals 로 비교
 		
 		
 		

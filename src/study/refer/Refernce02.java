@@ -78,12 +78,12 @@ public class Refernce02 {
 			
 			int[] intArr = new int[6];
 			double[] doubleArr = new double[12];
-			boolean[] boolArr =new boolean[4];
+			boolean[] boolArr =new boolean[6];
 			String[] strArr = new String[20];
 			
 			intArr[3] = 9;			//0
 			doubleArr[9] = 11.11; 	//0
-			boolArr[3] =true; 		//false
+			boolArr[4] = true; 		//false
 			strArr[15] = "점심"; 		//null
 //						length 8이 들어온다 // 배율의 길이만큼 바뀐다 intArr 10 ->  i<intArr.length 가 10으로 바뀜
 			for(	int i=0; i<intArr.length; i++	) {

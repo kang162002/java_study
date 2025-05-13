@@ -12,6 +12,7 @@ public class Computer {
 //	운영체제: 애플 OS X, 메인메모리: 32
 //	운영체제: 안드로이드, 메인메모리: 16
 //	public final String[] osType = { "윈도우10", "애플 OS X ", "안드로이드" };
+					// static final일때 이름 을 대문자
 	public static final String[] OS_TYPE = { "윈도우10", "애플 OS X ", "안드로이드" };  // 문자열 배열 저장
 	// 이름값이 바뀌지않게 할때 쓰는 final
 

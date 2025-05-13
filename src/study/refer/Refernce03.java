@@ -56,7 +56,7 @@ public class Refernce03 {
 			System.out.println();
 		}
 		
-		int [][] arr3 = { { 11,2,3}, {1,2,3,4}, };
+	
 		
 		
 		
