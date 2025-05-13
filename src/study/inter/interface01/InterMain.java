@@ -18,7 +18,7 @@ public class InterMain {
 
 		// Interface01 i1 = new Interface01(); 인터페이스 생성 불가( 추상 클래스와 유사)
 
-		Interface01 i1 = new ImpleClass();
+		Interface01 i1 = new ImpleClass(); 
 		i1.method1();
 		i1.method2();
 		// 부모가 인터페이스에 있기때문에 메소드1과 2를 부를수있다.

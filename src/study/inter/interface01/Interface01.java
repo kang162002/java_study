@@ -22,4 +22,4 @@ public interface Interface01 {
 
 	public void method2();// 추상 메소드
 
-}
+} 

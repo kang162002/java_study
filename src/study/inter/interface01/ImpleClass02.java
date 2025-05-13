@@ -19,5 +19,5 @@ public class ImpleClass02 implements Interface01, Interface02{
 	public void method2() {
 		System.out.println("method2222");
 		
-	} // 추상 메소드
+	} // 추상 메소드 
 }	

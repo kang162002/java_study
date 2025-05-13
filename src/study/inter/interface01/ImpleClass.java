@@ -18,4 +18,4 @@ public class ImpleClass implements Interface01 {
 		System.out.println("method2222");
 		
 	} // 추상 메소드
-}
+} 
