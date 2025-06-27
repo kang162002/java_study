@@ -13,12 +13,6 @@ public class DBBasic {
 
 		findProduct();
 
-		//selectProduct()
-		
-		//select -> find
-		//insert -> save
-		//update -> update / modify
-		//delete -> delete / remove
 		
 		findDept();
 		
