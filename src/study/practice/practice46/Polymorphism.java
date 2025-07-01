@@ -42,7 +42,7 @@ interface Healer {
 		hp += 50;
 		System.out.println(name + hp + "회복합니다.");
 	}
-	/* 3. Healer의 메소드를 오버라이딩하세요. */
+	/* 3. Healer의 메소드를 오버라이딩하세요!. */
 	
 	public void heal () {
 		hp += 30;
