@@ -14,9 +14,11 @@ import org.json.simple.parser.JSONParser;
 public class MidFcstInfoService {
 
 	// 외부 API 요청 -> json 텍스트 응답
-	private String requestApi_getMidTa() throws Exception {
+
+	private String requestApi_getMidTa(String tmFc, String regId) throws Exception {
 		StringBuilder urlBuilder = new StringBuilder(
 				"http://apis.data.go.kr/1360000/MidFcstInfoService/getMidTa"); /* URL */
+		urlBuilder.append("?" + URLEncoder.encode("serviceKey", "UTF-8") + "=서비스키"); /* Service Key */
 		urlBuilder.append("?" + URLEncoder.encode("serviceKey", "UTF-8")
 				+ "=cPguMSwEy2co%2BYgwiGjJKgpiw6%2FMkZ7ND2dh4qJdWds%2BFakaBARkJH18QzvbqAhTr%2B8AWZ4Qg8k%2BGAdVpzPkWQ%3D%3D"); /*
 																																 * Service
@@ -30,7 +32,11 @@ public class MidFcstInfoService {
 				+ URLEncoder.encode("JSON", "UTF-8")); /* 요청자료형식(XML/JSON)Default: XML */
 		urlBuilder.append("&" + URLEncoder.encode("regId", "UTF-8") + "="
 				+ URLEncoder.encode("11C20301", "UTF-8")); /* 11B10101 서울, 11B20201 인천 등 ( 별첨엑셀자료 참고) */
-		urlBuilder.append("&" + URLEncoder.encode("tmFc", "UTF-8") + "=" + URLEncoder.encode("202507030600",
+		urlBuilder.append("&" + URLEncoder.encode("tmFc", "UTF-8") + "=" + URLEncoder.encode("202507020600",
+				"UTF-8")); /*-일 2회(06:00,18:00)회 생성 되며 발표시각을 입력- YYYYMMDD0600(1800) 최근 24시간 자료만 제공*/
+		urlBuilder.append("&" + URLEncoder.encode("regId", "UTF-8") + "="
+				+ URLEncoder.encode(regId, "UTF-8")); /* 11B10101 서울, 11B20201 인천 등 ( 별첨엑셀자료 참고) */
+		urlBuilder.append("&" + URLEncoder.encode("tmFc", "UTF-8") + "=" + URLEncoder.encode(tmFc,
 				"UTF-8")); /*-일 2회(06:00,18:00)회 생성 되며 발표시각을 입력- YYYYMMDD0600(1800) 최근 24시간 자료만 제공*/
 
 		URL url = new URL(urlBuilder.toString());
@@ -60,13 +66,17 @@ public class MidFcstInfoService {
 	}
 
 	// json 텍스트 -> 파싱 -> 데이터 구조 변환 -> 반환
-	public MidTaDTO findMidTa() {
+
+
+	public MidTaDTO findMidTa(String tmFc, String regId) {
 
 		MidTaDTO midTaDTO = null;
 
 		try {
-			// String jsonString = requestApi_getMidTa();
-			String jsonString = "{\"response\":{\"header\":{\"resultCode\":\"00\",\"resultMsg\":\"NORMAL_SERVICE\"},\"body\":{\"dataType\":\"JSON\",\"items\":{\"item\":[{\"regId\":\"11C20301\",\"taMin4\":24,\"taMin4Low\":0,\"taMin4High\":0,\"taMax4\":31,\"taMax4Low\":0,\"taMax4High\":0,\"taMin5\":23,\"taMin5Low\":0,\"taMin5High\":0,\"taMax5\":33,\"taMax5Low\":0,\"taMax5High\":0,\"taMin6\":23,\"taMin6Low\":0,\"taMin6High\":0,\"taMax6\":34,\"taMax6Low\":0,\"taMax6High\":0,\"taMin7\":23,\"taMin7Low\":0,\"taMin7High\":0,\"taMax7\":33,\"taMax7Low\":0,\"taMax7High\":0,\"taMin8\":22,\"taMin8Low\":0,\"taMin8High\":0,\"taMax8\":32,\"taMax8Low\":0,\"taMax8High\":0,\"taMin9\":22,\"taMin9Low\":0,\"taMin9High\":0,\"taMax9\":32,\"taMax9Low\":0,\"taMax9High\":0,\"taMin10\":23,\"taMin10Low\":0,\"taMin10High\":0,\"taMax10\":31,\"taMax10Low\":0,\"taMax10High\":0}]},\"pageNo\":1,\"numOfRows\":10,\"totalCount\":1}}}";
+			
+			String jsonString = requestApi_getMidTa(tmFc, regId);
+			// String jsonString =
+			// "{\"response\":{\"header\":{\"resultCode\":\"00\",\"resultMsg\":\"NORMAL_SERVICE\"},\"body\":{\"dataType\":\"JSON\",\"items\":{\"item\":[{\"regId\":\"11C20301\",\"taMin4\":24,\"taMin4Low\":0,\"taMin4High\":0,\"taMax4\":31,\"taMax4Low\":0,\"taMax4High\":0,\"taMin5\":23,\"taMin5Low\":0,\"taMin5High\":0,\"taMax5\":33,\"taMax5Low\":0,\"taMax5High\":0,\"taMin6\":23,\"taMin6Low\":0,\"taMin6High\":0,\"taMax6\":34,\"taMax6Low\":0,\"taMax6High\":0,\"taMin7\":23,\"taMin7Low\":0,\"taMin7High\":0,\"taMax7\":33,\"taMax7Low\":0,\"taMax7High\":0,\"taMin8\":22,\"taMin8Low\":0,\"taMin8High\":0,\"taMax8\":32,\"taMax8Low\":0,\"taMax8High\":0,\"taMin9\":22,\"taMin9Low\":0,\"taMin9High\":0,\"taMax9\":32,\"taMax9Low\":0,\"taMax9High\":0,\"taMin10\":23,\"taMin10Low\":0,\"taMin10High\":0,\"taMax10\":31,\"taMax10Low\":0,\"taMax10High\":0}]},\"pageNo\":1,\"numOfRows\":10,\"totalCount\":1}}}";
 
 			// jsonString 텍스트 데이터 -> JSON 파싱 -> midTaDTO
 
@@ -112,6 +122,8 @@ public class MidFcstInfoService {
 			midTaDTO.setTaMax4(Integer.parseInt(itemObj.get("taMax4").toString()));
 			midTaDTO.setTaMin5(Integer.parseInt(itemObj.get("taMin5").toString()));
 			midTaDTO.setTaMax5(Integer.parseInt(itemObj.get("taMax5").toString()));
+
+			midTaDTO.setTmFc(tmFc);
 
 		} catch (Exception e) {
 			// 오류 내용 확인 -> 대처
