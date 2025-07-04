@@ -9,10 +9,10 @@ import java.net.URLEncoder;
 
 public class apiMain2 {
 
-	   public static void main(String[] args) throws IOException {
+	 public static void main(String[] args) throws IOException {
 	        StringBuilder urlBuilder = new StringBuilder("http://apis.data.go.kr/B552584/ArpltnInforInqireSvc/getMinuDustFrcstDspth"); /*URL*/
-	        urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=SsPwp5mUxqZZYgNH2qKBQA3z67ecQ%2FQvByR3k3%2BueuO6lP6ndCPQCXCs%2BGpF6iXGrtDwMPSbzBkgKmIeIbGJMw%3D%3D"); /*Service Key*/
-	        urlBuilder.append("&" + URLEncoder.encode("returnType","UTF-8") + "=" + URLEncoder.encode("xml", "UTF-8")); /*xml 또는 json*/
+	        urlBuilder.append("?" + URLEncoder.encode("serviceKey","UTF-8") + "=서비스키"); /*Service Key*/
+	        urlBuilder.append("&" + URLEncoder.encode("returnType","UTF-8") + "=" + URLEncoder.encode("json", "UTF-8")); /*xml 또는 json*/
 	        urlBuilder.append("&" + URLEncoder.encode("numOfRows","UTF-8") + "=" + URLEncoder.encode("100", "UTF-8")); /*한 페이지 결과 수(조회 날짜로 검색 시 사용 안함)*/
 	        urlBuilder.append("&" + URLEncoder.encode("pageNo","UTF-8") + "=" + URLEncoder.encode("1", "UTF-8")); /*페이지번호(조회 날짜로 검색 시 사용 안함)*/
 	        urlBuilder.append("&" + URLEncoder.encode("searchDate","UTF-8") + "=" + URLEncoder.encode("2025-07-01", "UTF-8")); /*통보시간 검색(조회 날짜 입력이 없을 경우 한달동안 예보통보 발령 날짜의 리스트 정보를 확인)*/
@@ -37,4 +37,5 @@ public class apiMain2 {
 	        conn.disconnect();
 	        System.out.println(sb.toString());
 	    }
+
 	}
